@@ -1,7 +1,5 @@
 // PeopleCollection.h
-#ifndef PEOPLECOLLECTION_H
-#define PEOPLECOLLECTION_H
-
+#pragma once
 #include "Person.h"
 #include <vector>
 #include <fstream>
@@ -16,5 +14,3 @@ public:
     void addPerson(Person* p);
     void saveToFile(const string& filename);
 };
-
-#endif
