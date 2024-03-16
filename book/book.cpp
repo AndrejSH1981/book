@@ -1,4 +1,4 @@
-﻿// book.cpp
+// book.cpp
 #include "Student.h"
 #include "Teacher.h"
 #include "Human.h"
@@ -25,17 +25,14 @@ int main() {
     int age_inf = 0;
     string human_inf = " ";
     
-
     PeopleCollection collection;
 
-    bool Running = true;
-    if (Running) {
     label1:
         UserInterface::displayMenu();
-        int choice;
-        cin >> choice;
+        int selected;
+        cin >> selected;
 
-        if (choice == 1) {
+        if (selected == 1) {
             string name, studentInf;
             int age;
             wcout << L"Введите имя студента (англ.): ";
@@ -51,24 +48,22 @@ int main() {
             studentInf_stud = studentInf;
             goto label1;;
         }
-        if (choice == 2) {
+        if (selected == 2) {
             string name, teacheInf;
             int age;
-
             cout << "Введите имя преподавателя (англ.): ";
             cin >> name;
             cout << "Введите возраст преподавателя: ";
             cin >> age;
             cout << "Введите инф./тел. преподователя (англ.): ";
             cin >> teacheInf;
-            
             collection.addPerson(new Teacher(name, age, "преподаватель " + teacheInf));
             name_teach = name;
             age_teach = age;
             teacheInf_inf = teacheInf;
             goto label1;
         }
-        if (choice == 3) {
+        if (selected == 3) {
             string name, inf;
             int age;
             cout << "Введите имя (англ.): ";
@@ -83,16 +78,14 @@ int main() {
             human_inf = inf;
             goto label1;
         }
-        if (choice == 4) {
+        if (selected == 4) {
             collection.saveToFile("textBookPeople.txt");
             goto label1;
         }
-        if (choice >= 5){
-            Running = false;
+        if (selected >= 5){
+
             goto label0;
         }
-
-    }
 label0:
     wcout << L"\nконец\n" << endl;
 
