@@ -1,7 +1,5 @@
 // Student.h
-#ifndef STUDENT_H
-#define STUDENT_H
-
+#pragma once
 #include "Person.h"
 
 using namespace std;
@@ -14,4 +12,3 @@ public:
     void displayInfo() override;
 };
 
-#endif
