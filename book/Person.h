@@ -1,7 +1,5 @@
 // Person.h
-#ifndef PERSON_H
-#define PERSON_H
-
+#pragma once
 #include <string>
 
 using namespace std;
@@ -17,4 +15,3 @@ public:
     virtual void displayInfo() = 0;
 };
 
-#endif
