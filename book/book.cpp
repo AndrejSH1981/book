@@ -38,12 +38,13 @@ int main() {
         if (choice == 1) {
             string name, studentInf;
             int age;
-            wcout << L"Введите имя студента: ";
+            wcout << L"Введите имя студента (англ.): ";
             cin >> name;
             wcout << L"Введите возраст студента: ";
             cin >> age;
-            wcout << L"Введите инф./тел. студента: ";
+            wcout << L"Введите инф./тел. студента (англ.): ";
             cin >> studentInf;
+            cout << studentInf << endl;
             collection.addPerson(new Student(name, age, "студент " + studentInf));
             name_stud = name;
             age_stud = age;
@@ -54,11 +55,11 @@ int main() {
             string name, teacheInf;
             int age;
 
-            cout << "Введите имя преподавателя: ";
+            cout << "Введите имя преподавателя (англ.): ";
             cin >> name;
             cout << "Введите возраст преподавателя: ";
             cin >> age;
-            cout << "Введите инф./тел. преподователя: ";
+            cout << "Введите инф./тел. преподователя (англ.): ";
             cin >> teacheInf;
             
             collection.addPerson(new Teacher(name, age, "преподаватель " + teacheInf));
@@ -70,11 +71,11 @@ int main() {
         if (choice == 3) {
             string name, inf;
             int age;
-            cout << "Введите имя: ";
+            cout << "Введите имя (англ.): ";
             cin >> name;
             cout << "Введите возраст: ";
             cin >> age;
-            cout << "Введите инф./тел.: ";
+            cout << "Введите инф./тел. (англ.): ";
             cin >> inf;
             collection.addPerson(new Human(name, age, inf));
             name_inf = name;
@@ -83,7 +84,7 @@ int main() {
             goto label1;
         }
         if (choice == 4) {
-            collection.saveToFile("BookPeople.txt");
+            collection.saveToFile("textBookPeople.txt");
             goto label1;
         }
         if (choice >= 5){
