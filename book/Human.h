@@ -1,7 +1,5 @@
 // Human.h
-#ifndef HUMAN_H
-#define HUMAN_H
-
+#pragma once
 #include "Person.h"
 
 using namespace std;
@@ -14,4 +12,3 @@ public:
     void displayInfo() override;
 };
 
-#endif
