@@ -1,10 +1,6 @@
 // UserInterface.h
-#ifndef USERINTERFACE_H
-#define USERINTERFACE_H
-
+#pragma once
 class UserInterface {
 public:
     static void displayMenu();
 };
-
-#endif
