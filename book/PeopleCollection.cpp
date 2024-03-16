@@ -9,16 +9,16 @@ void PeopleCollection::addPerson(Person* p) {
 }
 
 void PeopleCollection::saveToFile(const string& filename) {
-    ofstream file("people.txt");
+    ofstream file(filename);
     if (file.is_open()) {
         for (Person* p : people) {
-            file << "- Èìÿ:" << p->name << ", âîçðàñò: " << p->age << ", èíô./òåë: " << p->inf << "\n";
+            file << "- Ð˜Ð¼Ñ:" << p->name << ", Ð²Ð¾Ð·Ñ€Ð°ÑÑ‚: " << p->age << ", Ð¸Ð½Ñ„./Ñ‚ÐµÐ»: " << p->inf << "\n";
             p->displayInfo();
         }
         file.close();
-        wcout << L"=Â ôàéë çàïèñàíî=" << endl;
+        wcout << L"=Ð’ Ñ„Ð°Ð¹Ð» Ð·Ð°Ð¿Ð¸ÑÐ°Ð½Ð¾=" << endl;
     }
     else {
-        wcout << L"=Íå ïîëó÷èëîñü çàïèñàòü â ôàéë=" << endl;
+        wcout << L"=ÐÐµ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ð»Ð¾ÑÑŒ Ð·Ð°Ð¿Ð¸ÑÐ°Ñ‚ÑŒ Ð² Ñ„Ð°Ð¹Ð»=" << endl;
     }
 }
