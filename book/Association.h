@@ -1,7 +1,5 @@
 // Association.h
-#ifndef ASSOCIATION_H
-#define ASSOCIATION_H
-
+#pragma once
 #include "Student.h"
 #include "Teacher.h"
 #include "Human.h"
@@ -17,5 +15,3 @@ public:
 
     void displayAssociationInfo();
 };
-
-#endif
