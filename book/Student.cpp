@@ -5,10 +5,10 @@
 using namespace std;
 
 void Student::displayInfo() {
-    wcout << L"Èìÿ: ";
+    wcout << L"Ð˜Ð¼Ñ: ";
     cout << name;
-    wcout << L", Âîçðàñò: ";
+    wcout << L", Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚: ";
     cout << age;
-    wcout << L", Èíô./òåë.: ";
+    wcout << L", Ð˜Ð½Ñ„./Ñ‚ÐµÐ».: ";
     cout << inf << endl;
 }
